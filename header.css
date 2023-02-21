@@ -1,0 +1,65 @@
+header {
+  animation: FadeInTop 700ms;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 8.7rem;
+}
+
+header .logo {
+  display: grid;
+  place-content: center;
+}
+
+header .search {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 0.8rem;
+
+  width: 100%;
+  max-width: 57rem;
+}
+
+header .search input {
+  width: 100%;
+  max-width: 40.2rem;
+  background: var(--dark-green);
+
+  padding: 1.6rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  font-size: var(--line-height-small);
+  line-height: var(--line-height-medium);
+
+  color: var(--fc-titles);
+}
+
+header .search input:placeholder-shown {
+  color: var(--fc-primary);
+}
+
+header .search button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  background: var(--blue);
+
+  padding: 1.6rem 3.2rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-small);
+  line-height: 24px;
+
+  color: var(--white);
+
+  text-transform: uppercase;
+}

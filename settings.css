@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --white: white;
+  --black: #030b0d;
+  --dark-green: #06181c;
+  --blue: #065e7c;
+  --cyan: #4a808c;
+  --dark-bluish-green: #092d38;
+  --page-bg: #000000;
+  --gray: #4e5455;
+  --red: #f75a68;
+
+  --fw-medium: 400;
+  --fw-bold: 700;
+
+  --fc-primary: #7c7c8a;
+  --fc-titles: #e1e1e6;
+
+  --fs-small: 1.4rem;
+  --fs-medium: 1.6rem;
+  --fs-big: 2rem;
+  --fs-extra-large: 4rem;
+
+  --line-height-small: 1.6rem;
+  --line-height-medium: 2.4rem;
+  --line-height-big: 3.2rem;
+}
+
+body * {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--page-bg);
+}
+
+#app {
+  width: min(900px, 90vw);
+  max-width: 122rem;
+
+  padding-block: clamp(12rem, 15vh + 3rem, 18rem);
+}
+
+main,
+.table-wrapper,
+#table tbody {
+  width: 100%;
+  height: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+button {
+  transition: 200ms;
+
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+
+  filter: brightness(1.1);
+}
+
+/* Remove "X" icon from input search */
+input[type='search']::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type='search']::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}

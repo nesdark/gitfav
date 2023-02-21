@@ -1,0 +1,129 @@
+.table-wrapper.empty {
+}
+
+.table-wrapper {
+  overflow-x: overlay;
+}
+
+#table {
+  animation: FadeInBottom 700ms forwards;
+  animation-delay: 200ms;
+  opacity: 0;
+
+  width: 100%;
+
+  background: var(--black);
+
+  border: 1px solid var(--cyan);
+  border-radius: 1.2rem;
+
+  border-spacing: 0; /* Removes internal spaces  */
+}
+
+#table thead {
+  background: var(--dark-bluish-green);
+
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-big);
+  line-height: var(--line-height-big);
+
+  color: var(--fc-titles);
+}
+
+#table thead td {
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+}
+
+#table thead td:first-child {
+  border-radius: 1.2rem 0 0 0;
+}
+
+#table thead td:last-child {
+  border-radius: 0 1.2rem 0 0;
+}
+
+#table tbody tr:nth-child(even) td {
+  background: var(--dark-green);
+
+  border-block: 1px solid var(--cyan);
+}
+
+#table tbody tr td {
+  padding: 2.4rem 4rem;
+}
+
+#table tbody tr td,
+#table tbody tr td button {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-big);
+  line-height: var(--line-height-big);
+
+  color: var(--fc-titles);
+}
+
+#table tbody tr td:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+#table tbody tr td img {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+#table tbody tr td .names {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#table tbody tr td .user-name {
+  font-weight: var(--fw-medium);
+}
+
+#table tbody tr td button {
+  background: none;
+
+  border: none;
+
+  color: var(--red);
+}
+
+/* When table are empty */
+.table-wrapper.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--black);
+
+  border: 1px solid var(--cyan);
+  border-radius: 1.2rem;
+}
+
+.table-wrapper.empty #table {
+  border: none;
+}
+
+.table-wrapper .empty-message {
+  display: none;
+}
+
+.table-wrapper.empty .empty-message {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+.table-wrapper.empty p {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-extra-large);
+  line-height: var(--line-height-medium);
+
+  color: var(--gray);
+}
