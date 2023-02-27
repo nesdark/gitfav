@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="./header.css" />
     <link rel="stylesheet" href="./table.css" />
     <link rel="stylesheet" href="./animations.css" />
-    k
+    <link rel="stylesheet" href="./responsive.css" />
   </head>
   <body>
     <div id="app">
       <header class="wrapper">
-        <div class="logo">
+        <h1 class="logo">
           <svg
             width="187"
             height="33"
@@ -69,7 +69,7 @@
               fill="white"
             />
           </svg>
-        </div>
+        </h1>
         <div class="search">
           <label for="github-username" class="sr-only">
             Enter the Github username you would like to favorite
@@ -79,7 +79,7 @@
             id="github-username"
             placeholder="Enter the Github username you would like to favorite"
           />
-          <button>
+          <button class="favorite">
             <svg
               width="24"
               height="24"
@@ -94,7 +94,7 @@
                 fill="white"
               />
             </svg>
-            Favorite
+            <span> Favorite&plus; </span>
           </button>
         </div>
       </header>
@@ -106,95 +106,119 @@
                 <td>User</td>
                 <td>Repositories</td>
                 <td>Followers</td>
-                <td>Action</td>
+                <td><span>Action</span></td>
               </tr>
             </thead>
-            <div class="scroll">
-              <tbody>
-                <tr>
-                  <td>
-                    <img src="./public/user.svg " alt="User image" />
-                    <div class="-">
-                      <p class="name">Mayk Brito</p>
-                      <p class="user-name">/maykbrito</p>
-                    </div>
-                  </td>
-                  <td>123</td>
-                  <td>1234</td>
-                  <td><button>Remove</button></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="./public/user.svg " alt="User image" />
+            <tbody>
+              <tr>
+                <td>
+                  <img src="https://github.com/nesdark.png" alt="User image" />
+                  <a
+                    href="https://github.com/nesdark"
+                    class="names"
+                    target="_blank"
+                  >
                     <p class="name">Mayk Brito</p>
-                    <p class="user-name">/maykbrito</p>
-                  </td>
-                  <td>123</td>
-                  <td>1234</td>
-                  <td><button>Remove</button></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="./public/user.svg " alt="User image" />
+                    <span class="user-name">/maykbrito</span>
+                  </a>
+                </td>
+                <td class="repositories">123</td>
+                <td class="followers">1234</td>
+                <td class="remove">
+                  <button>&times; <span>Remove</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="https://github.com/nesdark.png" alt="User image" />
+                  <a
+                    href="https://github.com/nesdark"
+                    class="names"
+                    target="_blank"
+                  >
                     <p class="name">Mayk Brito</p>
-                    <p class="user-name">/maykbrito</p>
-                  </td>
-                  <td>123</td>
-                  <td>1234</td>
-                  <td><button>Remove</button></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="./public/user.svg " alt="User image" />
+                    <span class="user-name">/maykbrito</span>
+                  </a>
+                </td>
+                <td class="repositories">123</td>
+                <td class="followers">1234</td>
+                <td class="remove">
+                  <button>&times; <span>Remove</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="https://github.com/nesdark.png" alt="User image" />
+                  <a
+                    href="https://github.com/nesdark"
+                    class="names"
+                    target="_blank"
+                  >
                     <p class="name">Mayk Brito</p>
-                    <p class="user-name">/maykbrito</p>
-                  </td>
-                  <td>123</td>
-                  <td>1234</td>
-                  <td><button>Remove</button></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="./public/user.svg " alt="User image" />
+                    <span class="user-name">/maykbrito</span>
+                  </a>
+                </td>
+                <td class="repositories">123</td>
+                <td class="followers">1234</td>
+                <td class="remove">
+                  <button>&times; <span>Remove</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="https://github.com/nesdark.png" alt="User image" />
+                  <a
+                    href="https://github.com/nesdark"
+                    class="names"
+                    target="_blank"
+                  >
                     <p class="name">Mayk Brito</p>
-                    <p class="user-name">/maykbrito</p>
-                  </td>
-                  <td>123</td>
-                  <td>1234</td>
-                  <td><button>Remove</button></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="./public/user.svg " alt="User image" />
+                    <span class="user-name">/maykbrito</span>
+                  </a>
+                </td>
+                <td class="repositories">123</td>
+                <td class="followers">1234</td>
+                <td class="remove">
+                  <button>&times; <span>Remove</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="https://github.com/nesdark.png" alt="User image" />
+                  <a
+                    href="https://github.com/nesdark"
+                    class="names"
+                    target="_blank"
+                  >
                     <p class="name">Mayk Brito</p>
-                    <p class="user-name">/maykbrito</p>
-                  </td>
-                  <td>123</td>
-                  <td>1234</td>
-                  <td><button>Remove</button></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="./public/user.svg " alt="User image" />
+                    <span class="user-name">/maykbrito</span>
+                  </a>
+                </td>
+                <td class="repositories">123</td>
+                <td class="followers">1234</td>
+                <td class="remove">
+                  <button>&times; <span>Remove</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="https://github.com/nesdark.png" alt="User image" />
+                  <a
+                    href="https://github.com/nesdark"
+                    class="names"
+                    target="_blank"
+                  >
                     <p class="name">Mayk Brito</p>
-                    <p class="user-name">/maykbrito</p>
-                  </td>
-                  <td>123</td>
-                  <td>1234</td>
-                  <td><button>Remove</button></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="./public/user.svg " alt="User image" />
-                    <p class="name">Mayk Brito</p>
-                    <p class="user-name">/maykbrito</p>
-                  </td>
-                  <td>123</td>
-                  <td>1234</td>
-                  <td><button>Remove</button></td>
-                </tr>
-              </tbody>
-            </div>
+                    <span class="user-name">/maykbrito</span>
+                  </a>
+                </td>
+                <td class="repositories">123</td>
+                <td class="followers">1234</td>
+                <td class="remove">
+                  <button>&times; <span>Remove</span></button>
+                </td>
+              </tr>
+            </tbody>
           </table>
           <div class="empty-message">
             <svg

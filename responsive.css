@@ -1,0 +1,51 @@
+@media screen and (max-width: 884px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  #table tbody tr td button {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  #table tbody tr td {
+    padding: 2.4rem 2rem;
+  }
+
+  #table tbody tr td:not(:first-child) {
+    text-align: right;
+  }
+
+  #table thead tr td:nth-child(4) span,
+  #table tbody td button span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 466px) {
+  header .search {
+    gap: 0;
+  }
+
+  header .search #github-username {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  header .search .favorite {
+    padding: 1.6rem 1.6rem;
+
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  header .search .favorite span {
+    display: none;
+  }
+}

@@ -9,15 +9,17 @@
 :root {
   font-size: 62.5%;
 
+  --hue: 195;
+
   --white: white;
   --black: #030b0d;
   --dark-green: #06181c;
-  --blue: #065e7c;
-  --cyan: #4a808c;
-  --dark-bluish-green: #092d38;
+  --cyan: hsl(var(--hue), 31%, 42%);
+  --blue: hsl(var(--hue), 91%, 25%);
+  --dark-bluish-green: hsl(var(--hue), 72%, 13%);
   --page-bg: #000000;
   --gray: #4e5455;
-  --red: #f75a68;
+  --red: hsl(355, 91%, 66%);
 
   --fw-medium: 400;
   --fw-bold: 700;
@@ -51,29 +53,6 @@ body {
   background: var(--page-bg);
 }
 
-#app {
-  width: min(900px, 90vw);
-  max-width: 122rem;
-
-  padding-block: clamp(12rem, 15vh + 3rem, 18rem);
-}
-
-main,
-.table-wrapper,
-#table tbody {
-  width: 100%;
-  height: 100%;
-}
-
-.sr-only {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  opacity: 0;
-  visibility: hidden;
-}
-
 button {
   transition: 200ms;
 
@@ -84,6 +63,32 @@ button:hover {
   transform: scale(1.1);
 
   filter: brightness(1.1);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  width: min(1120px, 90vw);
+  max-width: 122rem;
+
+  padding-block: clamp(12rem, 15vh + 3rem, 18rem);
+}
+
+main,
+.table-wrapper,
+#table tbody {
+  width: 100%;
+  height: 100%;
 }
 
 /* Remove "X" icon from input search */
@@ -104,4 +109,23 @@ input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   display: none;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-right: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--cyan);
+  border-radius: 10px;
+  cursor: move;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: none;
 }
